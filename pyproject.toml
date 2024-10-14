@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "network-analizer"
+version = "0.1.0"
+description = ""
+authors = ["Oleksii Zaichenko <o5zaichenko@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+psutil = "^6.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
