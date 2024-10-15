@@ -1,11 +1,13 @@
-from logic.net_interface import get_network_interfaces
+from logic.network import NetObserver
 
 if __name__ == '__main__':
-    for ifc in get_network_interfaces():
-        print(ifc.name)
-
-        for c in ifc.get_connections():
-            print('\t', c.address.address)
-            for cc in c.connections:
-                print('\t\t', cc.status, cc.pid, cc.laddr.port, '->', cc.raddr)
-        print('---')
+    obs = NetObserver(1, 1, 1)
+    m = obs.connections_monitor()
+    for _ in range(5):
+        print(next(m))
+    m = obs.stats_monitor()
+    for _ in range(5):
+        print(next(m))
+    m = obs.traffic_monitor()
+    for _ in range(5):
+        print(next(m))
