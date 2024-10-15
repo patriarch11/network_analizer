@@ -142,7 +142,7 @@ class NetObserver:
         connections_interval_s: int,
         stats_interval_s: int,
         traffic_interval_s: int
-    ):
+    ) -> None:
         self._connections_interval_s = connections_interval_s
         self._stats_interval_s = stats_interval_s
         self._traffic_interval_s = traffic_interval_s
