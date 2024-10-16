@@ -4,11 +4,15 @@ version = "0.1.0"
 description = ""
 authors = ["Oleksii Zaichenko <o5zaichenko@gmail.com>"]
 readme = "README.md"
+packages = [{ include = "src" }]
 
 [tool.poetry.dependencies]
 python = "^3.12"
 psutil = "^6.0.0"
+kivy = "^2.3.0"
 
+[tool.poetry.scripts]
+app = "src.main:main"
 
 [build-system]
 requires = ["poetry-core"]
